@@ -3,12 +3,12 @@
 <head>
     <script>
         /**
-        * SCF_GATEWAY：https://driver.he-sb.workers.dev/
-        * SITE_NAME：he-sb的备用车库
+        * SCF_GATEWAY：SCF 云函数网关地址
+        * SITE_NAME：站点名称
         */
         window.GLOBAL_CONFIG = {
-            SCF_GATEWAY: "",
-            SITE_NAME: "FODI",
+            SCF_GATEWAY: "https://driver.he-sb.workers.dev/",
+            SITE_NAME: "he-sb的备用车库",
             IS_CF: true
         };
         if (window.GLOBAL_CONFIG.SCF_GATEWAY.indexOf('workers') === -1) {
