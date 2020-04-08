@@ -738,7 +738,7 @@ function file_video(path) {
     var content = `
 <div class="mdui-container-fluid">
 	<br>
-	<video class="plyr video" id="player" playsinline controls>
+	<video class="plyr" id="player" playsinline controls>
       <source src="${url}" type="video/mp4" />
 	</video>
 	<br>${playBtn}
