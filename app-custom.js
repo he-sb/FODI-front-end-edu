@@ -736,9 +736,9 @@ function file_video(path) {
         playBtn = `	<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" href="intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end"><i class="mdui-icon material-icons">&#xe039;</i>在mxplayer中播放</a>`;
     }
     var content = `
-<div class="mdui-container-fluid" class="container">
+<div class="mdui-container-fluid">
 	<br>
-	<video id="player" playsinline controls>
+	<video class="plyr video" id="player" playsinline controls>
       <source src="${url}" type="video/mp4" />
 	</video>
 	<br>${playBtn}
