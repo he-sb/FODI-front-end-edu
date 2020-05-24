@@ -738,10 +738,6 @@ function file_code(path) {
 <div class="mdui-container">
 <pre id="editor" ></pre>
 </div>
-<div class="mdui-textfield">
-	<label class="mdui-textfield-label">下载地址</label>
-	<input class="mdui-textfield-input" type="text" value="${href}"/>
-</div>
 <a href="${href}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 
 <script src="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe/js/ace.js"></script>
@@ -781,60 +777,15 @@ function copyToClipboard(str) {
 // 文件展示 视频 |mp4|webm|avi|
 function file_video(path) {
   const url = window.location.origin + path;
-  let player_items = [
-    {
-      text: 'MXPlayer(Free)',
-      href: `intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end`,
-    },
-    {
-      text: 'MXPlayer(Pro)',
-      href: `intent:${url}#Intent;package=com.mxtech.videoplayer.pro;S.title=${path};end`,
-    },
-    {
-      text: 'nPlayer',
-      href: `nplayer-${url}`,
-    },
-    {
-      text: 'VLC',
-      href: `vlc://${url}`,
-    },
-    {
-      text: 'PotPlayer',
-      href: `potplayer://${url}`
-    }
-  ]
-    .map(it => `<li class="mdui-menu-item"><a href="${it.href}" class="mdui-ripple">${it.text}</a></li>`)
-    .join('');
-  player_items += `<li class="mdui-divider"></li>
-                   <li class="mdui-menu-item"><a id="copy-link" class="mdui-ripple">复制链接</a></li>`;
-  const playBtn = `
-      <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-menu="{target:'#player-items'}">
-        <i class="mdui-icon material-icons">&#xe039;</i>外部播放器播放<i class="mdui-icon material-icons">&#xe5cf;</i>
-      </button>
-      <ul class="mdui-menu" id="player-items">${player_items}</ul>`;
 
   const content = `
 <div class="mdui-container-fluid">
 	<br>
 	<div class="mdui-video-fluid mdui-center" id="dplayer"></div>
-	<br>${playBtn}
-	<!-- 固定标签 -->
-	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">下载地址</label>
-	  <input class="mdui-textfield-input" type="text" value="${url}"/>
-	</div>
-	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">HTML 引用地址</label>
-	  <textarea class="mdui-textfield-input"><video><source src="${url}" type="video/mp4"></video></textarea>
-	</div>
+	<br>
 </div>
 <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
-  $('#content').html(content);
-  $('#copy-link').on('click', () => {
-    copyToClipboard(url);
-    mdui.snackbar('已复制到剪切板!');
-  });
 
 const dp = new DPlayer({
     container: document.getElementById("dplayer"),
@@ -865,15 +816,6 @@ function file_audio(path) {
 	  <source src="${url}"">
 	</audio>
 	<br>
-	<!-- 固定标签 -->
-	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">下载地址</label>
-	  <input class="mdui-textfield-input" type="text" value="${url}"/>
-	</div>
-	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">HTML 引用地址</label>
-	  <textarea class="mdui-textfield-input"><audio><source src="${url}"></audio></textarea>
-	</div>
 </div>
 <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
@@ -947,17 +889,8 @@ function file_image(path) {
 	    <img class="mdui-img-fluid" src="${url}"/>
     </div>
 	<br>
-	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">下载地址</label>
+  <div class="mdui-textfield">
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
-	</div>
-	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">HTML 引用地址</label>
-	  <input class="mdui-textfield-input" type="text" value="<img src='${url}' />"/>
-	</div>
-        <div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Markdown 引用地址</label>
-	  <input class="mdui-textfield-input" type="text" value="![](${url})"/>
 	</div>
         <br>
 </div>
