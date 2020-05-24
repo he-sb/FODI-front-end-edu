@@ -819,7 +819,6 @@ function file_video(path) {
 	<div class="mdui-video-fluid mdui-center" id="dplayer"></div>
 	<br>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
   $('#content').html(content);
   $('#copy-link').on('click', () => {
@@ -857,7 +856,6 @@ function file_audio(path) {
 	</audio>
 	<br>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
   $('#content').html(content);
 }
@@ -931,7 +929,6 @@ function file_image(path) {
 	<br>
         <br>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
     `;
   //my code
   $('#content').html(content);
