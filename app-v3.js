@@ -817,7 +817,7 @@ function file_video(path) {
 <div class="mdui-container-fluid">
 	<br>
 	<div class="mdui-video-fluid mdui-center" id="dplayer"></div>
-	<br>${playBtn}
+	<br>
 </div>
 <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
