@@ -738,6 +738,10 @@ function file_code(path) {
 <div class="mdui-container">
 <pre id="editor" ></pre>
 </div>
+<div class="mdui-textfield">
+	<label class="mdui-textfield-label">下载地址</label>
+	<input class="mdui-textfield-input" type="text" value="${href}"/>
+</div>
 <a href="${href}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 
 <script src="//cdn.jsdelivr.net/gh/5MayRain/goIndex-theme-nexmoe/js/ace.js"></script>
@@ -814,6 +818,15 @@ function file_video(path) {
 	<br>
 	<div class="mdui-video-fluid mdui-center" id="dplayer"></div>
 	<br>${playBtn}
+	<!-- 固定标签 -->
+	<div class="mdui-textfield">
+	  <label class="mdui-textfield-label">下载地址</label>
+	  <input class="mdui-textfield-input" type="text" value="${url}"/>
+	</div>
+	<div class="mdui-textfield">
+	  <label class="mdui-textfield-label">HTML 引用地址</label>
+	  <textarea class="mdui-textfield-input"><video><source src="${url}" type="video/mp4"></video></textarea>
+	</div>
 </div>
 <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
@@ -852,6 +865,15 @@ function file_audio(path) {
 	  <source src="${url}"">
 	</audio>
 	<br>
+	<!-- 固定标签 -->
+	<div class="mdui-textfield">
+	  <label class="mdui-textfield-label">下载地址</label>
+	  <input class="mdui-textfield-input" type="text" value="${url}"/>
+	</div>
+	<div class="mdui-textfield">
+	  <label class="mdui-textfield-label">HTML 引用地址</label>
+	  <textarea class="mdui-textfield-input"><audio><source src="${url}"></audio></textarea>
+	</div>
 </div>
 <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
@@ -925,8 +947,17 @@ function file_image(path) {
 	    <img class="mdui-img-fluid" src="${url}"/>
     </div>
 	<br>
-  <div class="mdui-textfield">
+	<div class="mdui-textfield">
+	  <label class="mdui-textfield-label">下载地址</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
+	</div>
+	<div class="mdui-textfield">
+	  <label class="mdui-textfield-label">HTML 引用地址</label>
+	  <input class="mdui-textfield-input" type="text" value="<img src='${url}' />"/>
+	</div>
+        <div class="mdui-textfield">
+	  <label class="mdui-textfield-label">Markdown 引用地址</label>
+	  <input class="mdui-textfield-input" type="text" value="![](${url})"/>
 	</div>
         <br>
 </div>
