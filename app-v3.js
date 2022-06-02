@@ -31,7 +31,7 @@ function init() {
 				<ul class="menu_ul">
 					<li class="menu_li"><a href="https://he-sb.top/" target="_blank">疯言疯语</a></li>
 					<li class="menu_li"><a href="https://tech.he-sb.top/" target="_blank">HE-SB-技术栈</a></li>
-					<li class="menu_li"><a href="https://gdir.he-sb.workers.dev/" target="_blank">登陆</a></li>
+					<li class="menu_li"><a href="https://gdir.he-sb.cf/" target="_blank">登陆</a></li>
 				</ul>
 				<div class="nav_icon" ></div>
 			</div>
